@@ -1,0 +1,182 @@
+.workflow-grid svg {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 15px;
+}
+
+.workflow-grid span {
+  margin-bottom: 13px;
+  font-size: 12px;
+}
+
+.workflow-grid h3 {
+  font-size: 17px;
+  line-height: 1.18;
+}
+
+.workflow-grid p {
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+@media (min-width: 981px) {
+  .hero {
+    min-height: 760px;
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 48px;
+    align-items: center;
+    padding: 108px 0 54px;
+    overflow: visible;
+    background: transparent;
+  }
+
+  .hero::after {
+    display: none;
+  }
+
+  .hero-copy {
+    width: auto;
+    padding-left: 8px;
+    z-index: 2;
+  }
+
+  .hero-showcase {
+    position: relative;
+    inset: auto;
+    min-height: 620px;
+    padding: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.92);
+    border-radius: 40px;
+    background: linear-gradient(145deg, rgba(255,255,255,.76), rgba(255,255,255,.36));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.96), 0 30px 80px rgba(31,36,43,.12);
+    -webkit-backdrop-filter: blur(24px) saturate(1.2);
+    backdrop-filter: blur(24px) saturate(1.2);
+  }
+
+  .hero-product {
+    height: 596px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 30px;
+    background: rgba(255,255,255,.78);
+    filter: saturate(.96) brightness(1.02);
+  }
+
+  .floating-work {
+    z-index: 3;
+    right: 28px;
+    bottom: 28px;
+    width: calc(100% - 56px);
+    background: linear-gradient(135deg, rgba(255,255,255,.72), rgba(255,255,255,.48));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.95), 0 20px 54px rgba(31,36,43,.09);
+  }
+
+  .nav-glass {
+    background: rgba(255,255,255,.48);
+    box-shadow: 0 12px 34px rgba(25,30,35,.075), inset 0 1px 0 rgba(255,255,255,.94);
+  }
+
+  .hero .button.glass {
+    background: rgba(255,255,255,.54);
+    border-color: rgba(30,35,40,.09);
+    box-shadow: 0 10px 26px rgba(31,36,43,.05);
+  }
+
+  .workflow {
+    grid-template-columns: 1.35fr 3.65fr;
+    align-items: center;
+    gap: 40px;
+    padding: 34px 44px;
+  }
+
+  .workflow-intro {
+    align-self: center;
+  }
+
+  .workflow h2 {
+    margin-bottom: 0;
+    font-size: clamp(27px, 2.15vw, 32px);
+    line-height: 1.08;
+  }
+
+  .workflow-grid {
+    gap: 26px;
+    align-items: start;
+  }
+
+  .capabilities {
+    grid-template-columns: .72fr 1.28fr;
+    gap: 44px;
+    margin-bottom: 82px;
+  }
+
+  .cap-copy h2 {
+    max-width: 390px;
+    font-size: clamp(44px, 4.8vw, 68px);
+    line-height: .94;
+    letter-spacing: -.06em;
+  }
+
+  .cap-grid {
+    gap: 16px;
+  }
+
+  .cap-grid article {
+    padding: 24px 26px;
+  }
+
+  .cap-grid h3 {
+    margin-bottom: 12px;
+    font-size: 21px;
+    line-height: 1.05;
+  }
+
+  .cap-grid p {
+    font-size: 15px;
+    line-height: 1.42;
+  }
+}
+
+/* A single, deliberate destination for capabilities and process. */
+.work,
+.expertise,
+.contact {
+  scroll-margin-top: 110px;
+}
+
+.expertise {
+  margin-bottom: 78px;
+}
+
+.expertise .capabilities {
+  margin-bottom: 48px;
+}
+
+.expertise .workflow {
+  margin-bottom: 0;
+}
+
+.contact {
+  min-height: 0;
+  margin-bottom: 70px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@media (max-width: 980px) {
+  .expertise {
+    margin-bottom: 64px;
+  }
+
+  .expertise .capabilities {
+    margin-bottom: 36px;
+  }
+
+  .contact {
+    min-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
