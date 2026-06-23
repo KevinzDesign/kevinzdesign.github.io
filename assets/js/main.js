@@ -15,8 +15,17 @@ const navTargets = [...navLinks]
   .filter(Boolean);
 
 const setActiveNav = id => {
-  navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${id}`));
+  navLinks.forEach(link => {
+    const isActive = link.getAttribute('href') === `#${id}`;
+    link.classList.toggle('active', isActive);
+    if (isActive) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
+  });
 };
+
+if (window.location.hash && document.querySelector(window.location.hash)) {
+  setActiveNav(window.location.hash.slice(1));
+}
 
 navLinks.forEach(link => link.addEventListener('click', () => {
   const href = link.getAttribute('href');
