@@ -385,10 +385,14 @@ footer { width: min(1240px, calc(100% - 56px)); margin-left: auto; margin-right:
   padding: 12px 14px;
   border: 1px solid rgba(255,255,255,.76);
   border-radius: 18px;
-  background: rgba(255,255,255,.66);
+  background: rgba(255,255,255,.52);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 10px 25px rgba(31,36,43,.08);
   -webkit-backdrop-filter: blur(18px) saturate(1.15);
   backdrop-filter: blur(18px) saturate(1.15);
+  min-height: 66px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .collection-card .card-caption {
   position: absolute;
@@ -398,10 +402,14 @@ footer { width: min(1240px, calc(100% - 56px)); margin-left: auto; margin-right:
   padding: 12px 14px;
   border: 1px solid rgba(255,255,255,.76);
   border-radius: 18px;
-  background: rgba(255,255,255,.66);
+  background: rgba(255,255,255,.52);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 10px 25px rgba(31,36,43,.08);
   -webkit-backdrop-filter: blur(18px) saturate(1.15);
   backdrop-filter: blur(18px) saturate(1.15);
+  min-height: 66px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .collection-card figcaption span,
 .collection-card .card-caption span {
@@ -441,12 +449,19 @@ footer { width: min(1240px, calc(100% - 56px)); margin-left: auto; margin-right:
   background: linear-gradient(145deg, rgba(255,255,255,.92), rgba(238,243,245,.62));
 }
 .photo-grid-work .product-card img {
+  position: absolute;
+  inset: 22px 26px 96px;
   object-fit: contain;
-  padding: 6%;
+  width: calc(100% - 52px);
+  height: calc(100% - 118px);
+  padding: 0;
   mix-blend-mode: multiply;
 }
 .photo-grid-work .product-card.hero-card img {
-  padding: 4%;
+  inset: 18px 34px 98px;
+  width: calc(100% - 68px);
+  height: calc(100% - 116px);
+  padding: 0;
 }
 .photo-grid-work .shelf-card {
   background: linear-gradient(145deg, rgba(255,255,255,.78), rgba(232,240,244,.52));
