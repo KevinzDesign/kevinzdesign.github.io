@@ -20,3 +20,7 @@ assets/images/corporate-label/packshot-peppercorns.jpg
 assets/images/corporate-label/packshot-sea-salt.jpg
 assets/images/corporate-label/packshot-turmeric-twin.jpg
 assets/images/corporate-label/packshot-turmeric-twin-large.jpg
+
+# Local generated artifacts, not part of the public website.
+output/
+tmp/

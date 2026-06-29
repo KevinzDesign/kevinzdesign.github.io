@@ -154,7 +154,8 @@
   .hero-showcase {
     position: relative;
     inset: auto;
-    min-height: 620px;
+    height: 620px;
+    min-height: 0;
     padding: 12px;
     overflow: hidden;
     border: 1px solid rgba(255,255,255,.92);
@@ -177,18 +178,18 @@
   .portfolio-showcase {
     display: grid;
     grid-template-columns: 1.08fr .92fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: minmax(0, 1fr);
     gap: 14px;
     padding: 18px;
   }
 
   .banner-main {
-    min-height: 100%;
+    min-height: 0;
   }
 
   .banner-column {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
     gap: 14px;
     min-height: 0;
   }
@@ -390,6 +391,33 @@
 }
 
 @media (max-width: 980px) {
+  .hero {
+    overflow: visible;
+    padding-bottom: 44px;
+  }
+
+  .hero-copy {
+    padding-bottom: 38px;
+  }
+
+  .hero-showcase.portfolio-showcase {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.84);
+    border-radius: 32px;
+    background: linear-gradient(145deg, rgba(255,255,255,.74), rgba(238,245,248,.46));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.94), 0 24px 58px rgba(31,36,43,.09);
+    -webkit-backdrop-filter: blur(22px) saturate(1.25);
+    backdrop-filter: blur(22px) saturate(1.25);
+  }
+
   .featured-project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -407,16 +435,29 @@
   }
 
   .banner-card {
-    min-height: 190px;
+    min-height: 0;
+    height: auto;
+    grid-template-rows: auto auto auto;
     border-radius: 24px;
   }
 
   .banner-main {
-    min-height: 300px;
+    min-height: 0;
+  }
+
+  .banner-card img {
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+
+  .banner-main img {
+    aspect-ratio: 4 / 3;
   }
 
   .banner-card strong {
     font-size: 20px;
+    line-height: 1.12;
   }
 
   .expertise {
@@ -457,8 +498,18 @@
     border-radius: 26px;
   }
 
+  .hero {
+    padding-bottom: 34px;
+  }
+
+  .hero-showcase.portfolio-showcase,
   .portfolio-showcase {
-    height: 560px;
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 28px;
   }
 
   .banner-column {
@@ -466,18 +517,32 @@
   }
 
   .banner-card {
-    min-height: 150px;
+    min-height: 0;
+    padding: 10px;
+    border-radius: 22px;
   }
 
   .banner-main {
-    min-height: 230px;
+    min-height: 0;
   }
 
   .banner-card span {
-    font-size: 8px;
+    margin-top: 2px;
+    font-size: 9px;
+    line-height: 1.15;
   }
 
   .banner-card strong {
     font-size: 17px;
+    line-height: 1.12;
+    letter-spacing: -.04em;
+  }
+
+  .banner-card img {
+    border-radius: 16px;
+  }
+
+  .banner-main img {
+    aspect-ratio: 1.32 / 1;
   }
 }
